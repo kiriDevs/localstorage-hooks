@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/kiriDevs/localstorage-hooks#readme",
   "devDependencies": {
+    "react": "^18.2.0",
     "typescript": "^4.8.2"
   }
 }

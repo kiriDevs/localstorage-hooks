@@ -1,0 +1,24 @@
+{
+  "name": "localstorage-hooks",
+  "version": "1.0.0",
+  "description": "Basic (and (maybe too) naive) React hook for localStorage, and another one with a state buffer in between. Useful for changes that shouldn't be committed instantly.",
+  "main": "dist/index.js",
+  "types": "dist/d/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kiriDevs/localstorage-hooks.git"
+  },
+  "author": "kiriDevs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kiriDevs/localstorage-hooks/issues"
+  },
+  "homepage": "https://github.com/kiriDevs/localstorage-hooks#readme",
+  "devDependencies": {
+    "typescript": "^4.8.2"
+  }
+}

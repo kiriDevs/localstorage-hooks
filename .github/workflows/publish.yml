@@ -1,0 +1,25 @@
+name: Publish
+on:
+  push:
+    branches:
+      - "main"
+      
+jobs:
+  npm:
+    name: Publish to NPM
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Check out current state of the repo
+      uses: actions/checkout@v3
+      
+    - name: Install dependencies in CI mode
+      run: npm ci
+      
+    - name: Build project
+      run: npm run build
+      
+    - name: Publish to NPM
+      uses: JS-DevTools/npm-publish@v1
+      with:
+        token: ${{ secrets.NPM_PUBLISH_TOKEN }}

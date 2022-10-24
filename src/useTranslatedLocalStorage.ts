@@ -10,7 +10,13 @@ const useJSONLocalStorage = <ContentType>(lsKey: string, defaultValue: ContentTy
     const [raw, setRaw] = useLocalStorage(lsKey, JSON.stringify(defaultValue));
     const [translated, setTranslated] = useState<ContentType>(JSON.parse(raw));
 
-    const set = (newValue: ContentType) => {
+    const set = (newValue: ContentType | ((prev: ContentType) => ContentType)) => {
+        if (typeof newValue === "function") {
+            const newValueMaker = (newValue as (prev: ContentType) => ContentType)
+            set(newValueMaker(translated));
+            return;
+        }
+
         setTranslated(newValue);
         setRaw(JSON.stringify(newValue));
     }

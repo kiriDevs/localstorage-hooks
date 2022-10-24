@@ -1,6 +1,6 @@
 {
   "name": "localstorage-hooks",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Basic (and (maybe too) naive) React hook for localStorage, and another one with a state buffer in between. Useful for changes that shouldn't be committed instantly.",
   "main": "out/js/index.js",
   "types": "out/dec/index.d.ts",
